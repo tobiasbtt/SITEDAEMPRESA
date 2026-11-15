@@ -1822,6 +1822,57 @@ img, canvas, video, iframe, svg { max-width: 100% !important; }
   .projetos-head { margin-bottom: 32px !important; }
   .projetos-head h2 { font-size: clamp(24px, 7vw, 36px) !important; line-height: 1.2 !important; white-space: normal !important; }
   .projetos-head p { font-size: 14px !important; white-space: normal !important; overflow: visible !important; max-width: 100% !important; display: block !important; }
+  /* Bloco "Atuamos em..." e botão orçamento */
+  .projetos-more { margin-top: 40px !important; text-align: center !important; padding: 0 16px !important; width: 100% !important; box-sizing: border-box !important; }
+  .projetos-more p { font-size: 14px !important; white-space: normal !important; overflow: visible !important; text-overflow: unset !important; max-width: 100% !important; word-break: break-word !important; text-align: center !important; margin-bottom: 20px !important; }
+  .projetos-more .btn-primary { display: block !important; width: 100% !important; max-width: 320px !important; margin: 0 auto !important; text-align: center !important; box-sizing: border-box !important; }
+
+  /* ===== HERO - ticker/tagline ===== */
+  .hlogo-tag-line2 {
+    font-size: 9px !important;
+    letter-spacing: 1.5px !important;
+    word-break: break-word !important;
+    white-space: normal !important;
+    max-width: 90vw !important;
+    text-align: center !important;
+    line-height: 1.6 !important;
+  }
+  .hlogo-tag-line1 {
+    font-size: clamp(20px, 5vw, 30px) !important;
+    text-align: center !important;
+  }
+  .hlogo-img {
+    width: min(280px, 75vw) !important;
+  }
+
+  /* ===== CTA section com logo grande ===== */
+  .cta-inner {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+    text-align: center !important;
+  }
+  .cta-inner h2 { font-size: clamp(22px, 6vw, 32px) !important; text-align: left !important; }
+  .cta-inner p { font-size: 14px !important; text-align: left !important; }
+
+  /* ===== VMV cards ===== */
+  .vmv-grid { grid-template-columns: 1fr !important; gap: 12px !important; }
+  .vmv-card { padding: 28px 20px !important; }
+  .vmv-h3 { font-size: 26px !important; }
+
+  /* ===== Missão Visão Valores layout ===== */
+  .vmv-layout { grid-template-columns: 1fr !important; gap: 32px !important; }
+  .vmv-numeros-vert { flex-direction: row !important; flex-wrap: wrap !important; gap: 16px !important; }
+  .vmv-numeros-vert .vmv-num-item { flex: 1 1 calc(50% - 16px) !important; }
+
+  /* ===== Footer ===== */
+  .ftr-grid, .footer-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+  .ftr-logo img { max-width: 160px !important; }
+
+  /* ===== Elementos centrados que devem manter center ===== */
+  .hlogo-img-wrap, .hlogo-tagline, .hlogo-scroll-cta,
+  .projetos-more, .projetos-more p,
+  .vmv-card { text-align: center !important; }
+  .vmv-lbl, .vmv-h3, .vmv-body { text-align: left !important; }
 }
 
 </style>
