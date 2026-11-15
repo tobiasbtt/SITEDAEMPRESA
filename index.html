@@ -1691,6 +1691,90 @@ img, canvas, video, iframe, svg { max-width: 100% !important; }
 /* Nav hamburger scroll effect */
 #nav.scrolled .nav-ham span { background: #222 !important; }
 
+/* ════════════════════════════════════════
+   MOBILE — CORREÇÕES GERAIS
+   ════════════════════════════════════════ */
+
+/* Remove text-justify no mobile (causa espaçamento horrível) */
+@media (max-width: 768px) {
+  * { text-align: left !important; }
+  p, li, span, div { word-break: break-word; }
+
+  /* Hero título — cabe na tela */
+  .hero-h1 { font-size: clamp(30px, 9vw, 50px) !important; letter-spacing: -1px !important; line-height: 1.05 !important; }
+  .hero-h1 .line2 { font-size: inherit !important; }
+  .hero-h1 .line3 { font-size: 14px !important; }
+
+  /* Hero desc menor */
+  .hero-desc { font-size: 14px !important; line-height: 1.6 !important; }
+  .hero-eyebrow { font-size: 10px !important; letter-spacing: 2px !important; }
+
+  /* Hero logo section */
+  .hlogo-title { font-size: clamp(28px, 8vw, 48px) !important; }
+  .hlogo-tagline { font-size: 13px !important; padding: 0 16px !important; }
+
+  /* Seções — padding menor */
+  section { padding: 60px 0 !important; }
+  .container { padding: 0 20px !important; }
+
+  /* Títulos de seção menores */
+  .sec-title, .srv2-section-title, h2 { font-size: clamp(24px, 7vw, 36px) !important; }
+
+  /* Cards de serviço — 1 coluna */
+  .srv2-grid { grid-template-columns: 1fr !important; gap: 0 !important; }
+  .srv2-card { padding: 24px 20px 20px !important; }
+
+  /* Sobre grid — 1 coluna */
+  .sobre2-layout { grid-template-columns: 1fr !important; gap: 32px !important; }
+  .sobre2-img-wrap { max-height: 280px !important; border-radius: 8px !important; overflow: hidden !important; }
+  .sobre2-img-wrap img { width: 100% !important; height: 280px !important; object-fit: cover !important; }
+
+  /* Projetos — 1 coluna */
+  .projetos-grid, .prj-grid { grid-template-columns: 1fr !important; }
+  .prj-card:first-child { grid-column: span 1 !important; }
+
+  /* Logos clientes — 2 colunas */
+  .logos-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 10px !important; }
+  .logo-slot { height: 90px !important; padding: 12px 16px !important; }
+  .logo-slot img { max-height: 50px !important; }
+
+  /* VMV */
+  .vmv-layout { grid-template-columns: 1fr !important; gap: 32px !important; }
+  .vmv-numeros, .vmv-numeros-vert { flex-direction: row !important; flex-wrap: wrap !important; gap: 8px !important; }
+  .vmv-num-item { flex: 1 1 calc(50% - 4px) !important; min-width: 120px !important; }
+
+  /* Footer grid — 1 coluna */
+  .ftr-grid, .footer-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+  .ftr-logo { height: 80px !important; }
+  .ftr-brand-tagline { font-size: 14px !important; }
+  .ftr-kw-grid, .ftr-keywords { grid-template-columns: repeat(2, 1fr) !important; }
+
+  /* CTA section */
+  .cta-inner { flex-direction: column !important; align-items: flex-start !important; gap: 20px !important; text-align: left !important; }
+
+  /* Tecnico grid */
+  .tecnico-grid { grid-template-columns: 1fr !important; }
+
+  /* Botões hero largura total */
+  .hero-actions { flex-direction: column !important; align-items: stretch !important; gap: 12px !important; }
+  .btn-hero-primary, .btn-hero-secondary { width: 100% !important; justify-content: center !important; padding: 14px 20px !important; font-size: 14px !important; }
+
+  /* Stats hero — coluna */
+  .hero-stats { flex-direction: column !important; gap: 16px !important; }
+  .hero-stat { border-right: none !important; border-bottom: 1px solid rgba(255,255,255,.12) !important; padding-bottom: 16px !important; }
+
+  /* Modal contato */
+  #modal-contato-box { padding: 36px 24px 28px !important; }
+  .modal-btn { font-size: 14px !important; padding: 14px !important; }
+}
+
+/* Telas muito pequenas */
+@media (max-width: 380px) {
+  .hero-h1 { font-size: clamp(26px, 8vw, 40px) !important; }
+  .logos-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .container { padding: 0 16px !important; }
+}
+
 </style>
 </head>
 <body>
