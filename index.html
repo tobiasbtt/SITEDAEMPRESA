@@ -1697,6 +1697,10 @@ img, canvas, video, iframe, svg { max-width: 100% !important; }
 
 /* Remove text-justify no mobile (causa espaçamento horrível) */
 @media (max-width: 768px) {
+  /* Nav logo — menor no mobile para não cortar */
+  #nav { padding: 0 16px !important; height: 70px !important; overflow: visible !important; }
+  .nav-logo img { height: 48px !important; width: auto !important; max-width: 180px !important; }
+  .nav-ham { right: 16px !important; }
   * { text-align: left !important; }
   p, li, span, div { word-break: break-word; }
 
