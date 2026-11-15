@@ -1787,35 +1787,59 @@ img, canvas, video, iframe, svg { max-width: 100% !important; }
     overflow: hidden !important;
     border-radius: 10px !important;
   }
+  /* Card no mobile: layout fixo sem hover, mostra tudo */
+  .prj-card {
+    min-height: unset !important;
+    height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: visible !important;
+  }
+  /* Imagem de fundo vira um elemento de altura fixa no topo */
+  .prj-card::before {
+    content: '' !important;
+    display: block !important;
+    height: 180px !important;
+    width: 100% !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-image: inherit !important;
+    border-radius: 10px 10px 0 0 !important;
+    flex-shrink: 0 !important;
+  }
   .prj-card .prj-info {
-    position: absolute !important;
-    inset: 0 !important;
+    position: static !important;
+    inset: unset !important;
     display: flex !important;
     flex-direction: column !important;
     align-items: flex-start !important;
-    justify-content: flex-end !important;
-    padding: 20px !important;
-    background: linear-gradient(0deg, rgba(13,13,13,0.90) 0%, rgba(13,13,13,0.60) 60%, rgba(13,13,13,0.20) 100%) !important;
+    justify-content: flex-start !important;
+    padding: 16px !important;
+    background: rgba(13,13,13,0.92) !important;
     text-align: left !important;
-    overflow: hidden !important;
+    overflow: visible !important;
+    border-radius: 0 0 10px 10px !important;
+    flex: 1 !important;
   }
   .prj-title {
-    font-size: 17px !important;
+    font-size: 16px !important;
     line-height: 1.3 !important;
     color: #fff !important;
     margin-bottom: 8px !important;
     text-align: left !important;
     white-space: normal !important;
+    overflow: visible !important;
   }
   .prj-desc {
     font-size: 13px !important;
-    line-height: 1.5 !important;
+    line-height: 1.6 !important;
     color: rgba(255,255,255,0.85) !important;
     display: block !important;
     text-align: left !important;
     white-space: normal !important;
-    overflow: hidden !important;
-    max-height: 90px !important;
+    overflow: visible !important;
+    max-height: none !important;
+    margin-bottom: 12px !important;
   }
   .prj-tags { display: flex !important; flex-wrap: wrap !important; gap: 6px !important; margin-top: 10px !important; justify-content: flex-start !important; }
   .prj-tag { font-size: 11px !important; padding: 4px 8px !important; }
