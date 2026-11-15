@@ -1787,26 +1787,16 @@ img, canvas, video, iframe, svg { max-width: 100% !important; }
     overflow: hidden !important;
     border-radius: 10px !important;
   }
-  /* Card no mobile: layout fixo sem hover, mostra tudo */
+  /* Card no mobile: imagem no topo + texto completo embaixo */
   .prj-card {
     min-height: unset !important;
     height: auto !important;
     display: flex !important;
     flex-direction: column !important;
-    overflow: visible !important;
+    overflow: hidden !important;
+    background-color: #111 !important;
   }
-  /* Imagem de fundo vira um elemento de altura fixa no topo */
-  .prj-card::before {
-    content: '' !important;
-    display: block !important;
-    height: 180px !important;
-    width: 100% !important;
-    background-size: cover !important;
-    background-position: center !important;
-    background-image: inherit !important;
-    border-radius: 10px 10px 0 0 !important;
-    flex-shrink: 0 !important;
-  }
+  /* Área da imagem de fundo */
   .prj-card .prj-info {
     position: static !important;
     inset: unset !important;
@@ -1815,11 +1805,15 @@ img, canvas, video, iframe, svg { max-width: 100% !important; }
     align-items: flex-start !important;
     justify-content: flex-start !important;
     padding: 16px !important;
-    background: rgba(13,13,13,0.92) !important;
+    background: rgba(13,13,13,0.95) !important;
     text-align: left !important;
     overflow: visible !important;
-    border-radius: 0 0 10px 10px !important;
-    flex: 1 !important;
+    margin-top: 180px !important;
+  }
+  /* Reposiciona a info sobre a imagem de fundo que está no próprio card */
+  .prj-card {
+    background-size: cover !important;
+    background-position: center top !important;
   }
   .prj-title {
     font-size: 16px !important;
