@@ -2469,8 +2469,24 @@ img, canvas, video, iframe, svg { max-width: 100% !important; }
 
 @media(max-width:760px){
   .sistemas-grid{grid-template-columns:1fr!important;}
-  .modal-header,.modal-body{padding:28px 24px!important;}
+  .modal-header,.modal-body{padding:28px 20px!important;}
   .modal-title{font-size:26px!important;}
+  .modal-cta{
+    text-align:center!important;
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:center!important;
+  }
+  .modal-cta p{text-align:center!important;}
+  .modal-cta .btn-primary,
+  .modal-cta-btn{
+    display:block!important;
+    width:100%!important;
+    max-width:300px!important;
+    text-align:center!important;
+    margin:0 auto!important;
+    box-sizing:border-box!important;
+  }
 }
 </style>
 
@@ -2532,7 +2548,7 @@ function openSistema(id) {
   html2 += '</div>';
   html2 += '<div class="modal-body">' + data.content;
   html2 += '<div class="modal-cta"><p>Precisa de um projeto para sua edifica&ccedil;&atilde;o?</p>';
-  html2 += '<a href="https://wa.me/5547992452246?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank" class="btn-primary" style="display:inline-block;">Solicitar Or&ccedil;amento</a></div>';
+  html2 += '<a href="https://wa.me/5547992452246?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank" class="btn-primary modal-cta-btn">Solicitar Or&ccedil;amento</a></div>';
   html2 += '</div>';
   document.getElementById('sistemasModalContent').innerHTML = html2;
   document.getElementById('sistemasModal').classList.add('active');
